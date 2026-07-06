@@ -1,0 +1,222 @@
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 768px){
+    .area{
+        position: relative;
+        width: 45%;
+        height: 110vh;
+        margin: 100px 2.5% ;
+        text-align: center;
+        border-radius: 1%;
+        background-color: rgb(246, 246, 246);
+    }
+    .area img{
+        width: 70%;
+        margin-top: 8px;
+        height: 40%;
+        border-radius: 5%;
+    }
+    .area h5{
+        font-size: 0.95rem; 
+        margin-top: 6px;       
+    }
+    .area p{
+        position: absolute;
+        height: 30vh;
+        top: 53%;
+        overflow: auto;
+        right: 2%;
+        left: 2%;
+        background-color: rgb(155, 220, 255);
+        border-radius: 3%;
+        text-align: center;
+        
+    }
+    .buying{
+        padding: 5px 12px;
+    }
+    .buying button{
+        padding:0 20px;
+        margin-right: 5px;
+    }
+
+}
+@media (min-width: 768px) {
+    .area{
+        position: relative;
+        width: 30%;
+        height: 90vh;
+        margin: 100px 1.6% ;
+        text-align: center;
+        border-radius: 1%;
+        background-color: rgb(246, 246, 246);
+    }
+    .area img{
+        width: 70%;
+        margin-top: 8px;
+        height: 40%;
+        border-radius: 5%;
+    }
+    .area h5{
+        font-size: 1rem; 
+        margin-top: 6px;       
+    }
+    .area p{
+        position: absolute;
+        height: 30vh;
+        top: 53%;
+        overflow: auto;
+        right: 2%;
+        left: 2%;
+        background-color: rgb(155, 220, 255);
+        border-radius: 3%;
+        text-align: center;
+        
+    }
+    .buying{
+        padding: 5px 12px;
+    }
+    .buying button{
+        padding:0 20px;
+        margin-right: 5px;
+    }
+}
+
+.frame {
+    width: 400px;
+    height: 400px;
+}
+.center {
+    position: absolute;
+	width: 220px;
+	height: 220px;
+    margin: 0 auto;
+}
+
+.dot-1 {
+	position: absolute;
+	z-index: 3;
+	width: 30px;
+	height: 30px;
+	top: 95px;
+	left: 95px;
+	background:darkblue;
+	border-radius: 50%;
+	animation-fill-mode: both;
+	animation: jump-jump-1 2s infinite alternate;
+}
+
+.dot-2 {
+	position: absolute;
+	z-index: 2;
+	width: 60px;
+	height: 60px;
+	top: 80px;
+	left: 80px;
+    background-color: darkblue;
+	border-radius: 50%;
+	animation-fill-mode: both;
+	animation: jump-jump-2 2s  infinite alternate;
+}
+
+.dot-3 {
+	position: absolute;
+	z-index: 1;
+	width: 90px;
+	height: 90px;
+	top: 65px;
+	left: 65px;
+    background-color: darkblue;
+	border-radius: 50%;
+	animation-fill-mode: both;
+	animation: jump-jump-3 2s  infinite alternate;
+}
+
+@keyframes jump-jump-1 {
+	0%, 70% {
+		box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+		transform: scale(0);
+	}
+
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+		transform: scale(1);
+	}
+}
+
+@keyframes jump-jump-2 {
+	0%, 40% {
+		box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+		transform: scale(0);
+	}
+
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+		transform: scale(1);
+	}
+}
+
+@keyframes jump-jump-3 {
+	0%, 10% {
+		box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
+		transform: scale(0);
+	}
+
+	100% {
+		box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+		transform: scale(1);
+	}
+}
+
+.buying{
+    position: absolute;
+    top: 90%;
+    border-color: transparent;
+}
+.buying button{
+    border:transparent; 
+    transition: all 1s;
+}
+.area:hover button{
+    background-color: rgb(2, 106, 171);
+}
+.menu li{
+    transition: all 1s;
+}
+.menu li:not(:last-child):hover{
+    background-color: rgb(2, 106, 171);
+    cursor: pointer;
+    border-radius: 10%;
+}
+.final{
+    position: relative;
+    font-size: 1.4rem;
+}
+.final:hover{
+    background-color: rgb(175, 175, 175);
+    border: 10%;
+}
+.final::after{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    position: absolute;
+    padding: 5px 10px;
+    top: 50%;
+    left: 50%;
+    background-color: darkblue;
+    border-radius: 50% 45%;
+    content: attr(number-content);
+    display: none;
+    
+}
+.final.num::after{
+    display: block;
+}
+
+
+
+
